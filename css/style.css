@@ -1,0 +1,290 @@
+a {
+  cursor: pointer;
+  display: inline-block;
+}
+
+body {
+  font-family: 'Open Sans', Sans-serif;
+  font-size: 18px;
+  color: #333;
+  background:	#F0FFFF;
+  padding: 0;
+  margin: 0;
+}
+
+body .container {
+  margin: 0;
+  font-family: Helvetica;
+  background: url('../pictures/world.jpg') top center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  transition: 0.3s all ease-in-out;
+  box-shadow: 0 0 5vh rgba(0, 0, 0, 0.1);
+}
+body.modal-active .container {
+  transform: scale(0.95, 0.95);
+  opacity: .9;
+  pointer-events: none;
+}
+body.modal-active div.modal {
+  top: 50%;
+}
+
+.actions {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.actions .btn {
+  color: #888;
+  border-radius: .3em;
+  padding: .5em 1em;
+  vertical-align: baseline;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+  position: relative;
+}
+.actions .btn::after {
+  content: "";
+  width: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #aaa;
+  position: absolute;
+  transition: 0.3s all ease-in-out;
+}
+.actions .btn:hover, .actions .btn:focus {
+  color: #666;
+  outline: none;
+}
+.actions .btn:hover::after, .actions .btn:focus::after {
+  width: 100%;
+}
+.actions .btn:active {
+  top: .1em;
+}
+.actions .btn ~ .btn {
+  margin-left: 1em;
+}
+.actions .btn.login {
+  color: 	#000000;
+  border-style: solid;
+  background: linear-gradient(to right, #af207a, #fbab2a); 
+  border-color: #DC143C;
+  font-size: 30px;
+}
+.actions .btn.login:hover, .actions .btn.login:focus {
+  color: #000000;
+  border-style: solid;
+  background: linear-gradient(to right, #af207a, #fbab2a); 
+  border-color: #0000FF;
+  font-size: 42px;
+}
+.actions .btn.register {
+  color: 	#000000;
+  border-style: solid;
+  background: linear-gradient(to right, #af207a, #fbab2a); 
+  border-color: #DC143C;
+  font-size: 30px;
+}
+.actions .btn.register:hover, .actions .btn.register:focus {
+  color: #000000;
+  border-style: solid;
+  background: linear-gradient(to right, #af207a, #fbab2a);  
+  border-color: #0000FF;
+  font-size: 42px;
+}
+
+
+div.modal {
+  position: absolute;
+  padding: 4em;
+  background: #293040;
+  color: #888;
+  top: -100vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s all ease-in-out;
+  min-width: 300px;
+  font-size: 14px;
+  border-radius: 0;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+div.modal .content {
+  transition: 0.3s all ease-in-out;
+  max-height: 45em;
+  overflow: hidden;
+}
+div.modal .success-check {
+  width: 1em;
+  height: 1em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  background-size: contain;
+  transition: 0.3s all ease-in-out;
+  max-height: 0;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0%);
+}
+div.modal.success {
+  border-radius: 50em;
+  min-width: 0;
+  font-size: 4em;
+  padding: 1em;
+  text-align: center;
+}
+div.modal.success .content {
+  max-height: 0;
+  max-width: 0;
+}
+div.modal.success .success-check {
+  opacity: 1;
+  max-height: none;
+}
+div.modal .nav {
+  font-size: 20px;
+  font-weight: lighter;
+  margin-bottom: 4em;
+}
+div.modal .nav.active {
+  font-weight: 600;
+  color: #fff;
+}
+div.modal .nav + .nav {
+  margin-left: 2em;
+}
+div.modal label {
+  text-transform: uppercase;
+  font-size: 10px;
+  display: block;
+}
+div.modal .email {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s all ease-in-out;
+  opacity: 0;
+}
+div.modal .email input {
+  visibility: none;
+}
+div.modal.register .email {
+  max-height: 6em;
+  opacity: 1;
+}
+div.modal.register .email input {
+  display: block;
+}
+div.modal input, div.modal button {
+  box-sizing: border-box;
+  width: 100%;
+  border: 0;
+  border-radius: .3em;
+  padding: .7em 1em;
+  font-family: 'Open Sans', Sans-serif;
+}
+div.modal input:focus, div.modal button:focus {
+  outline: none;
+}
+div.modal input {
+  background: rgba(226, 188, 151, 0.1);
+  margin: .5em 0 1.5em;
+  font-weight: 600;
+  color: #E2BC97;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s all ease-in-out;
+  letter-spacing: .05em;
+}
+div.modal input:focus {
+  border-bottom-color: rgba(226, 188, 151, 0.4);
+}
+div.modal button {
+  cursor: pointer;
+  margin: 4em 0;
+  background: #E2BC97;
+  color: #293040;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.3s all ease-in-out;
+}
+div.modal button + button {
+  margin-top: .5em;
+}
+div.modal button + button::after {
+  display: none;
+}
+div.modal button + div {
+  border-top: 1px solid rgba(226, 188, 151, 0.5);
+  margin-top: 3em;
+  padding-top: 3em;
+}
+div.modal button::before {
+  content: "";
+  top: 0;
+  left: -4px;
+  transition: 0.3s all ease-in-out;
+  background: #E2BC97;
+  height: 100%;
+  width: 5px;
+  position: absolute;
+  transition-duration: 3s;
+  display: none;
+}
+div.modal button.loading .loading {
+  display: block;
+}
+div.modal .text-center {
+  text-align: center;
+}
+div.modal a {
+  color: #888;
+  text-decoration: none;
+}
+div.modal button span {
+  display: none;
+}
+div.modal.register button .register {
+  
+  display: block;
+}
+div.modal.login button .login {
+  display: block;
+}
+div.modal button.loading span {
+  display: none !important;
+}
+div.modal button.loading span.loading {
+  animation: 3s throb ease-in-out;
+  display: block !important;
+}
+
+div.modal {
+  background: #293040;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url();
+  background-size: cover;
+}
+
+.success-check {
+  background-image: url();
+}
+
+@keyframes throb {
+  0%,100% {
+    letter-spacing: .05em;
+  }
+  50% {
+    letter-spacing: .2em;
+  }
+}

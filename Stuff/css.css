@@ -42,7 +42,7 @@ Treehouse Styling
 body {
   margin: 0;
   font-family: Helvetica;
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/25480/hero-img.jpg') top center no-repeat;
+  background: url('world.jpg') top center no-repeat;
   background-size: cover;
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 .logo {
-  background: transparent url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/25480/treehouse-white.svg') center center no-repeat;
+  background: transparent url('Colink.jpg') center center no-repeat;
   width: 195px;
   background-size: contain;
   text-indent: 100%;
@@ -70,8 +70,8 @@ body {
 
 .nav li a {
   text-decoration: none;
-  color: #fff;
-  font-size: 12px;
+  color: #00008B;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
@@ -97,3 +97,4 @@ body {
     min-width: 768px;
   }
 }
+
