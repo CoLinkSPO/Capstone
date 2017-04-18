@@ -71,32 +71,30 @@ body.modal-active div.modal {
   margin-left: 1em;
 }
 .actions .btn.login {
-  color: 	#000000;
+  color: 	#F0F0F0;
   border-style: solid;
-  background: linear-gradient(to right, #af207a, #fbab2a); 
-  border-color: #DC143C;
-  font-size: 30px;
+  background: #383B42;
+  font-size: 22px;
 }
 .actions .btn.login:hover, .actions .btn.login:focus {
   color: #000000;
   border-style: solid;
   background: linear-gradient(to right, #af207a, #fbab2a); 
-  border-color: #0000FF;
-  font-size: 42px;
+  border-color: #F0F0F0;;
+  font-size: 30px;
 }
 .actions .btn.register {
-  color: 	#000000;
+  color: 	#F0F0F0;
   border-style: solid;
-  background: linear-gradient(to right, #af207a, #fbab2a); 
-  border-color: #DC143C;
-  font-size: 30px;
+  background: #383B42;
+  font-size: 22px;
 }
 .actions .btn.register:hover, .actions .btn.register:focus {
   color: #000000;
   border-style: solid;
   background: linear-gradient(to right, #af207a, #fbab2a);  
-  border-color: #0000FF;
-  font-size: 42px;
+  border-color: #F0F0F0;;
+  font-size: 30px;
 }
 
 
