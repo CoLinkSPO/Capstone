@@ -17,7 +17,7 @@ $('a.nav').click(function() {
   $('div.modal a.nav.'+$(this).data('target')).addClass('active');
   /* Without pulling in my jquery parent visiblility thing, I'm just going to hard code it */
   
-  //$('div.modal input'+($(this).data('target') == 'login' ? '#username' : '#email')).focus();
+  $('div.modal input'+($(this).data('target') == 'login' ? '#username' : '#email')).focus();
 });
  
 $('form').submit(function(e) {
